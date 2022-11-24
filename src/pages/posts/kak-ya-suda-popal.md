@@ -1,8 +1,8 @@
 ---
-title: 'Как я оказался в ракутене'
+title: 'Как я оказался в Ракутене'
 pubDate: 2022-11-24
-description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
+description: 'Начало конца'
+author: 'SillyCoon'
 image:
     url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg'
     alt: 'The Astro logo with the word One.'
