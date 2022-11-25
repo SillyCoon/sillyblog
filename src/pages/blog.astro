@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import BlogPost from '../components/BlogPost.astro';
 
 const posts = await Astro.glob('./posts/*.md');
 ---
@@ -7,6 +8,6 @@ const posts = await Astro.glob('./posts/*.md');
 <Layout title="Blog">
     <p>This is where I will post about my journey learning Astro.</p>
     <ul>
-      {posts.map(p => <li><a href={p.url}>{p.frontmatter.title}</a></li>)}
+      {posts.map(p => <BlogPost url={p.url} title={p.frontmatter.title}></BlogPost>)}
     </ul>
 </Layout>
