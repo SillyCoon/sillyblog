@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/MarkdownPostLayout.astro'
 title: 'Как я оказался в Ракутене'
 pubDate: 2022-11-24
 description: 'Начало конца'

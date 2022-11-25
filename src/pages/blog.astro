@@ -5,7 +5,6 @@ const posts = await Astro.glob('./posts/*.md');
 ---
 
 <Layout title="Blog">
-    <h1>My Astro Learning Blog</h1>
     <p>This is where I will post about my journey learning Astro.</p>
     <ul>
       {posts.map(p => <li><a href={p.url}>{p.frontmatter.title}</a></li>)}
