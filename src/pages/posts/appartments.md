@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/MarkdownPostLayout.astro'
 title: 'Как мы искали жилье в Японии'
 pubDate: 2022-11-24
 description: 'Полный конец'

@@ -1,0 +1,17 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PostsTags from '../../components/PostsTags.astro';
+const posts = await Astro.glob("../posts/*.md");
+---
+
+<Layout title="Tags">
+  <PostsTags posts={posts}></PostsTags>
+</Layout>
+
+<style>
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+</style>

@@ -1,0 +1,21 @@
+---
+import { getUniqueTags } from '../utils/tags';
+import Tag from './Tag.astro';
+
+const { posts } = Astro.props;
+const tags = getUniqueTags(posts);
+---
+
+<div class="tags">
+  {tags.map((tag) => (
+    <Tag name={tag}></Tag>
+  ))}
+</div>
+
+<style>
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+</style>

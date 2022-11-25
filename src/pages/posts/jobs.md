@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/MarkdownPostLayout.astro'
 title: 'Как я искал работы в Японии'
 pubDate: 2022-11-24
 description: 'Середина конца'
