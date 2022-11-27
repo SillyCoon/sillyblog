@@ -34,7 +34,6 @@ h1 {
   background-color: #ff9776;
 }
 
-
 .nav-links {
   width: 100%;
   top: 5rem;
@@ -54,7 +53,8 @@ h1 {
   text-transform: uppercase;
 }
 
-.nav-links a:hover, a:focus {
+.nav-links a:hover,
+a:focus {
   background-color: #ff9776;
 }
 
@@ -64,7 +64,6 @@ h1 {
 
 @media screen and (min-width: 636px) {
   .nav-links {
-    margin-left: 5em;
     display: block;
     position: static;
     width: auto;
@@ -79,5 +78,13 @@ h1 {
   .hamburger {
     display: none;
   }
+}
 
+.dark body {
+  background-color: #0d0950;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
 }
