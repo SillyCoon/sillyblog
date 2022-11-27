@@ -1,5 +1,8 @@
 ---
+import Greeting from '../components/Greeting';
 import Layout from '../layouts/Layout.astro';
 ---
+
 <Layout title="SillyBlog">
+  <Greeting client:load messages={['Hi', 'Hello', 'Howdy', 'Hey there']} />
 </Layout>
