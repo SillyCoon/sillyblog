@@ -1,8 +1,26 @@
 ---
 import Greeting from '../components/Greeting';
+import Article from '../layouts/Article.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="SillyBlog">
+  <Article>
+    <p>Всем привет в этом бложике</p>
+    <p>
+      Здесь я планирую заниматься неуемной графоманией по поводу и без, делиться
+      своим опытом о работе/жилье в той стране, в которой нахожусь (на данный
+      момент это Япония).
+    </p>
+    <p>
+      Накидать список литературы которую я освоил и что из него могу
+      порекомендовать.
+    </p>
+    <p>
+      Ну и подтянуть свои навыки в статических сайтах/SSR, а то всю жизнь делаю
+      SPA, нужно наверстать упущенное.
+    </p>
+  </Article>
+
   <!-- <Greeting client:load messages={['Hi', 'Hello', 'Howdy', 'Hey there']} /> -->
 </Layout>

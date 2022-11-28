@@ -7,6 +7,9 @@ module.exports = {
         80: '80ch',
       },
     },
+    fontFamily: {
+      sans: 'Ubuntu'
+    }
   },
   plugins: [],
 };
