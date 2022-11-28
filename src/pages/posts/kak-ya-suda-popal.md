@@ -4,9 +4,6 @@ title: 'Как я оказался в Ракутене'
 pubDate: 2022-11-24
 description: 'Начало конца'
 author: 'SillyCoon'
-image:
-  url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg'
-  alt: 'The Astro logo with the word One.'
 tags: ['rakuten', 'job']
 ---
 
