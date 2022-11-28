@@ -6,6 +6,6 @@ const { posts } = Astro.props;
 const tags = getUniqueTags(posts);
 ---
 
-<div class="flex flex-wrap mx-0 my-auto">
+<div class="mx-0 my-auto flex flex-wrap">
   {tags.map((tag) => <Tag name={tag} />)}
 </div>

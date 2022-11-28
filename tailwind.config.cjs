@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       maxWidth: {
-        '80': '80ch'
-      }
+        80: '80ch',
+      },
     },
   },
   plugins: [],

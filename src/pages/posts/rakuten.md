@@ -5,9 +5,9 @@ pubDate: 2022-11-24
 description: 'Бесконечный конец'
 author: 'SillyCoon'
 image:
-    url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg'
-    alt: 'The Astro logo with the word One.'
-tags: ["job", "rakuten", "pain"]
+  url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg'
+  alt: 'The Astro logo with the word One.'
+tags: ['job', 'rakuten', 'pain']
 ---
 
 - инженерное качество на нуле, сеньоры не умеют в `git rebase`
@@ -20,7 +20,7 @@ tags: ["job", "rakuten", "pain"]
 - Менеджеры повыше занижают довольство отделам где разрешена удаленка
 - Заведомо набирают людей со скилом из других стран на маленькую зп с невозможностью ее каким либо образом быстро повысить до соответствующего уровня (ваш покорный слуга Associated Software Developer что условно джун)
 
-+ не самая низкая зарплата, но по факту ниже среднего
-+ Кушац вкусно
-+ Помогли переехать правда, сняли хату, отель на 14 дней
-+ Некоторые менеджеры не прессуют
+* не самая низкая зарплата, но по факту ниже среднего
+* Кушац вкусно
+* Помогли переехать правда, сняли хату, отель на 14 дней
+* Некоторые менеджеры не прессуют

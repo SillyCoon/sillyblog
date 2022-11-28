@@ -18,5 +18,10 @@
     "immutable": "^4.1.0",
     "preact": "^10.11.3",
     "tailwindcss": "^3.2.4"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.0",
+    "prettier-plugin-astro": "^0.7.0",
+    "prettier-plugin-tailwindcss": "^0.2.0"
   }
 }
