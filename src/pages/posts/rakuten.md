@@ -8,6 +8,7 @@ author: 'SillyCoon'
 # url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg'
 # alt: 'The Astro logo with the word One.'
 tags: ['job', 'rakuten', 'pain']
+draft: true
 ---
 
 - инженерное качество на нуле, сеньоры не умеют в `git rebase`

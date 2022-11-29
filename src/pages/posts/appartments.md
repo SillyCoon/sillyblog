@@ -5,6 +5,7 @@ pubDate: 2022-11-24
 description: 'Полный конец'
 author: 'SillyCoon'
 tags: ['apartments', 'search']
+draft: true
 ---
 
 - Эмердженси контакт с полной ответственностью за тебя (приложить документ)

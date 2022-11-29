@@ -5,6 +5,7 @@ pubDate: 2022-11-24
 description: 'Середина конца'
 author: 'SillyCoon'
 tags: ['job', 'search']
+draft: true
 ---
 
 ## Женерал вещи

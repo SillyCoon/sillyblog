@@ -5,6 +5,7 @@ pubDate: 2022-11-24
 description: 'Начало конца'
 author: 'SillyCoon'
 tags: ['rakuten', 'job']
+draft: true
 ---
 
 ## Почему
