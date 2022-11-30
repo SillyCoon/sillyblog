@@ -1,13 +1,19 @@
 ---
+import LetterLogo from './LetterLogo.astro';
 import NavLink from './NavLink.astro';
 ---
 
 <div
-  class="nav-links top-5 left-12 m-0 hidden w-full sm:static sm:block sm:bg-none"
+  class="nav-links top-5 left-12 m-0 hidden w-full justify-between sm:static sm:flex sm:bg-none"
 >
-  <NavLink href="/">Home</NavLink>
-  <NavLink href="/about/">About</NavLink>
-  <NavLink href="/blog/">Blog</NavLink>
-  <!-- <NavLink href="/tags">Tags</NavLink> -->
-  <NavLink href="/literature">Literature</NavLink>
+  <div class="flex flex-col items-center pb-3 sm:flex-row sm:pb-0">
+    <NavLink href="/">Home</NavLink>
+    <NavLink href="/about/">About</NavLink>
+    <NavLink href="/blog/">Blog</NavLink>
+    <NavLink href="/literature">Literature</NavLink>
+    <!-- <NavLink href="/tags">Tags</NavLink> -->
+  </div>
+  <div class="hidden sm:block">
+    <LetterLogo color="white" />
+  </div>
 </div>

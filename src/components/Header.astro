@@ -1,15 +1,13 @@
 ---
-import LetterLogo from './LetterLogo.astro';
 import Navigation from './Navigation.astro';
 import Hamburger from './Hamburger.astro';
 ---
 
-<header class="sticky top-0 bg-red-600">
+<header class="bg-red-600 sm:sticky sm:top-0">
   <div class="mx-auto w-full max-w-80 px-4">
     <Hamburger />
-    <nav class="flex h-14 flex-row items-center justify-between">
+    <nav class="flex items-center sm:h-14">
       <Navigation />
-      <LetterLogo color="white" />
     </nav>
   </div>
 </header>
