@@ -1,7 +1,11 @@
 ---
+import BlogPost from '../components/BlogPost.astro';
 import Logo from '../components/Logo.astro';
 import Article from '../layouts/Article.astro';
 import Layout from '../layouts/Layout.astro';
+import { findLatestPost } from '../utils/posts';
+
+const latestPost = findLatestPost(await Astro.glob('./posts/*.md'));
 ---
 
 <Layout title="SillyBlog">
@@ -27,6 +31,18 @@ import Layout from '../layouts/Layout.astro';
         </p>
       </Article>
     </div>
+  </div>
+  <div class="mt-10">
+    <p>
+      А вот и последний пост: {
+        latestPost && (
+          <BlogPost
+            url={latestPost?.url}
+            title={latestPost?.frontmatter?.title}
+          />
+        )
+      }
+    </p>
   </div>
 
   <!-- <Greeting client:load messages={['Hi', 'Hello', 'Howdy', 'Hey there']} /> -->

@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/MarkdownPostLayout.astro'
 title: 'Работа в Ракутене'
-pubDate: 2022-11-24
+pubDate: 2022-11-25
 description: 'Бесконечный конец'
 author: 'SillyCoon'
 # image:

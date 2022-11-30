@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/MarkdownPostLayout.astro'
 title: 'Как я оказался в Ракутене'
-pubDate: 2022-11-24
+pubDate: 2022-11-26
 description: 'Начало конца'
 author: 'SillyCoon'
 tags: ['rakuten', 'job']
