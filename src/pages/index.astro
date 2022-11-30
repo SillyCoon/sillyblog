@@ -1,26 +1,33 @@
 ---
-import Greeting from '../components/Greeting';
+import Logo from '../components/Logo.astro';
 import Article from '../layouts/Article.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="SillyBlog">
-  <Article>
-    <p>Всем привет в этом бложике</p>
-    <p>
-      Здесь я планирую заниматься неуемной графоманией по поводу и без, делиться
-      своим опытом о работе/жилье в той стране, в которой нахожусь (на данный
-      момент это Япония).
-    </p>
-    <p>
-      Накидать список литературы которую я освоил и что из него могу
-      порекомендовать.
-    </p>
-    <p>
-      Ну и подтянуть свои навыки в статических сайтах/SSR, а то всю жизнь делаю
-      SPA, нужно <i>наверстать</i> упущенное.
-    </p>
-  </Article>
+  <div class="flex justify-between">
+    <div class="self-end">
+      <Logo width={300} />
+    </div>
+    <div class="rounded-3xl border-2 border-solid border-black bg-white p-4">
+      <Article>
+        <p>Всем привет в этом бложике</p>
+        <p>
+          Здесь я планирую заниматься неуемной графоманией по поводу и без,
+          делиться своим опытом о работе/жилье в той стране, в которой нахожусь
+          (на данный момент это Япония).
+        </p>
+        <p>
+          Накидать список литературы которую я освоил и что из него могу
+          порекомендовать.
+        </p>
+        <p>
+          Ну и подтянуть свои навыки в статических сайтах/SSR, а то всю жизнь
+          делаю SPA, нужно <i>наверстать</i> упущенное.
+        </p>
+      </Article>
+    </div>
+  </div>
 
   <!-- <Greeting client:load messages={['Hi', 'Hello', 'Howdy', 'Hey there']} /> -->
 </Layout>
