@@ -1,9 +1,14 @@
-import { Set } from 'immutable';
+import { List } from 'immutable';
 
-export const findLatestPost = <T extends { frontmatter: any }>(posts: T[]) =>
-  Set(posts)
-    .sort(
+export const sortPostsByPubDate = <T extends { frontmatter: any }>(
+  posts: T[]
+) =>
+  List(
+    posts.sort(
       (a, b) =>
         +new Date(b.frontmatter.pubDate) - +new Date(a.frontmatter.pubDate)
     )
-    .first();
+  );
+
+export const findLatestPost = <T extends { frontmatter: any }>(posts: T[]) =>
+  sortPostsByPubDate(posts).first();

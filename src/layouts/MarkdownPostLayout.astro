@@ -1,5 +1,5 @@
 ---
-import Date from '../components/Date.astro';
+import Date from '../components/base/Date.astro';
 import PostsTags from '../components/PostsTags.astro';
 import Layout from './Layout.astro';
 const { frontmatter } = Astro.props;
@@ -9,7 +9,7 @@ const { frontmatter } = Astro.props;
   <section class="mb-4">
     <span class="text-xl italic">{frontmatter.description}</span>
 
-    <div class="flex justify-between items-center">
+    <div class="flex items-center justify-between">
       <Date date={frontmatter.pubDate} />
       <PostsTags posts={[{ frontmatter }]} />
     </div>
