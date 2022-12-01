@@ -1,9 +1,9 @@
 ---
-import PostLayout from './PostLayout.astro';
+import Post from './Post.astro';
 import Layout from './Layout.astro';
 const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
-  <PostLayout frontmatter={frontmatter}><slot /></PostLayout>
+  <Post frontmatter={frontmatter}><slot /></Post>
 </Layout>
