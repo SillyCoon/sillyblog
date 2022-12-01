@@ -2,7 +2,7 @@
 import PostsTags from '../components/PostsTags.astro';
 import Date from '../components/base/Date.astro';
 
-const { description, pubDate, image } = Astro.props;
+const { description, pubDate, image, tags } = Astro.props.frontmatter;
 ---
 
 <section class="mb-4">
@@ -10,13 +10,7 @@ const { description, pubDate, image } = Astro.props;
 
   <div class="flex items-center justify-between">
     <Date date={pubDate} />
-    <!-- <PostsTags
-      posts={[
-        {
-          frontmatter,
-        },
-      ]}
-    /> -->
+    <PostsTags tags={tags} />
   </div>
   <img src={image?.url} width="300" alt={image?.alt} />
 </section>

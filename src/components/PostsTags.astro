@@ -1,11 +1,15 @@
 ---
-import { getUniqueTags } from '../utils/tags';
 import Tag from './Tag.astro';
+import { Set } from 'immutable';
 
-const { posts } = Astro.props;
-const tags = getUniqueTags(posts);
+export interface Props {
+  tags: string[];
+}
+
+const { tags } = Astro.props;
+const uniqueTags = Set(tags).toArray();
 ---
 
 <div class="mx-0 my-auto flex flex-wrap">
-  {tags.map((tag) => <Tag name={tag} />)}
+  {uniqueTags.map((tag) => <Tag name={tag} />)}
 </div>

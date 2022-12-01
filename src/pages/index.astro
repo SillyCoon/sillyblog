@@ -6,6 +6,8 @@ import Layout from '../layouts/Layout.astro';
 import { findLatestPost } from '../utils/posts';
 import { Converter } from 'showdown';
 import PostArticle from '../layouts/PostArticle.astro';
+import PostHeader from '../layouts/PostHeader.astro';
+import Title from '../components/base/Title.astro';
 
 const latestPost = findLatestPost(await Astro.glob('./posts/*.md'));
 const latestPostExists = latestPost && !latestPost.frontmatter.draft;
@@ -40,11 +42,15 @@ const latestPostExists = latestPost && !latestPost.frontmatter.draft;
       А вот и последний пост:
       {
         latestPostExists && (
-          <PostArticle>
-            <Fragment
-              set:html={new Converter().makeHtml(latestPost?.rawContent())}
-            />
-          </PostArticle>
+          <Fragment>
+            <Title>{latestPost?.frontmatter.title}</Title>
+            <PostHeader frontmatter={latestPost?.frontmatter} />
+            <PostArticle>
+              <Fragment
+                set:html={new Converter().makeHtml(latestPost?.rawContent())}
+              />
+            </PostArticle>
+          </Fragment>
         )
       }
       {!latestPostExists && <p>Кажется постов еще нет :(</p>}

@@ -5,13 +5,5 @@ const posts = await Astro.glob('../posts/*.md');
 ---
 
 <Layout title="Tags">
-  <PostsTags posts={posts} />
+  <PostsTags tags={posts.flatMap((p) => p.frontmatter.tags)} />
 </Layout>
-
-<style>
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-  }
-</style>
