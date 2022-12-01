@@ -4,8 +4,11 @@ import Logo from '../components/base/Logo.astro';
 import Article from '../layouts/Article.astro';
 import Layout from '../layouts/Layout.astro';
 import { findLatestPost } from '../utils/posts';
+import { Converter } from 'showdown';
+import PostArticle from '../layouts/PostArticle.astro';
 
 const latestPost = findLatestPost(await Astro.glob('./posts/*.md'));
+const latestPostExists = latestPost && !latestPost.frontmatter.draft;
 ---
 
 <Layout title="SillyBlog">
@@ -33,17 +36,26 @@ const latestPost = findLatestPost(await Astro.glob('./posts/*.md'));
     </div>
   </div>
   <div class="mt-10">
-    <p>
-      А вот и последний пост: {
-        latestPost && (
-          <BlogPost
-            url={latestPost?.url}
-            title={latestPost?.frontmatter?.title}
-          />
+    <div>
+      А вот и последний пост:
+      {
+        latestPostExists && (
+          <PostArticle>
+            <Fragment
+              set:html={new Converter().makeHtml(latestPost?.rawContent())}
+            />
+          </PostArticle>
         )
       }
-    </p>
-  </div>
+      {!latestPostExists && <p>Кажется постов еще нет :(</p>}
 
-  <!-- <Greeting client:load messages={['Hi', 'Hello', 'Howdy', 'Hey there']} /> -->
+      <!-- : <BlogPost
+        url={latestPost?.url}
+        title={latestPost?.frontmatter?.title}
+      /> -->
+      <div></div>
+
+      <!-- <Greeting client:load messages={['Hi', 'Hello', 'Howdy', 'Hey there']} /> -->
+    </div>
+  </div>
 </Layout>

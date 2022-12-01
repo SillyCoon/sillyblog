@@ -1,27 +1,9 @@
 ---
-import Date from '../components/base/Date.astro';
-import PostsTags from '../components/PostsTags.astro';
+import PostLayout from './PostLayout.astro';
 import Layout from './Layout.astro';
 const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
-  <section class="mb-4">
-    <span class="text-xl italic">{frontmatter.description}</span>
-
-    <div class="flex items-center justify-between">
-      <Date date={frontmatter.pubDate} />
-      <PostsTags posts={[{ frontmatter }]} />
-    </div>
-    <img
-      src={frontmatter.image?.url}
-      width="300"
-      alt={frontmatter.image?.alt}
-    />
-  </section>
-  <article
-    class="[&>p]:mb-2 [&>h3]:mb-2 [&>h3]:mt-4 [&>h3]:text-2xl [&>h2]:mb-3 [&>h2]:text-4xl"
-  >
-    <slot />
-  </article>
+  <PostLayout frontmatter={frontmatter}><slot /></PostLayout>
 </Layout>
