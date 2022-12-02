@@ -44,11 +44,22 @@ draft: true
 - Тупо поболтали чуть чуть обо мне, рассказали про компанию немного, но названия не сказали до самого конца как я помню (где-то начало декабря), попросили послать CV и сопроводительное письмо + будет тест на кодилити
 
 <details>
-<summary>Spoiler</summary>
-and kek
-</details>
+<summary>Мое сопроводительное письмо</summary>
+Dear Rakuten HR,
 
-! spoiler
+In the Rakuten's vacancies description I was very pleased with the presence of a huge number of modern technologies that I can use during development. In particular, it’s wonderful that the company places great emphasis on functional programming, encouraging knowledge of such languages as Scala and Haskell. I believe that the future belongs to these languages, hence joining Rakuten for me is a great chance to create value in the team of like-minded people, who move the world forward. I think that working on such systems is much more interesting than on another web application which simplifies the work of managers. Personally, I am eager to experience an extremely pleasant feeling. The one that reaches the heart of every human-being when one brings about a real progress: here and now. I am confident that it is in my power to capitalize on my experience and make the whole world a better place to live.
+
+Now on my current work I’m refining the company’s internal system to track the progress of development of the main product. We are developing the system that allows to bring together a large number of main applications’ components as well as various third-party programs for analyzing errors in code and so one. Now a lot of managers’ work is automated and it takes only seconds to do something that took days before. For development we use Angular and Scala with Akka, which we migrate to ZIO due to the obvious advantages of functional programming.
+
+Recently in addition to Scala I have begun to learn Haskell for a deeper understanding of FP principles. It’s not that easy, but It’s very interesting field to become better developer. In my spare time I like to play guitar, sometimes the ukulele, watch popular science videos on various topics (from philosophy courses to the history of math). Also I especially like listening to podcasts about Agile methodologies and new programming trends, while shopping or just walking around the street with my headphones on.
+
+It was also a lucky coincidence that literally half a year ago I got immersed into Japanese culture. Like many others, I started with anime (now I watch Naruto Shippuden) and try to read manga. Recently, I have learned a little about sengoku jidai, mainly through playing games such as Total War Shogun and watching some popular science videos on YouTube. I even cook some traditional Japanese dishes, such as mitarashi dango and moti. It's very tasty, I also want to feel a real taste in Japan.
+
+I'm very pleased with Rakuten culture. It's great that company makes lives of its employees better by digitalization and automatization of repetitive tasks, enabling developers to focus on more complicated and interesting tasks instead. This is facilitated by the progressive approach to the organization of working time, which distinguishes Rakuten from many other traditional Japanese companies. I am sure I will have enough free time for adaptation and learning Japanese. Personally, I am also very attracted by the ubiquitous promotion of cashless payments and 5g technology by Rakuten. I really do not like cash, and fast Internet in the modern world is always useful. Also before getting to know Rakuten, I could not imagine a cafeteria being furnished in such a creative and delicious fashion that I would crave to find myself there as soon as possible.
+
+Futhermore, Rakuten keeps abreast of the times as the company’s operational scope ranges from e-commerce to cancer treatment. I see a bright future in Rakuten, hence I will feel safe for my own future as well. And it is a kind of revelation for me to hear that Rakuten is careful about funding sources. I am very glad to realize that my work will not benefit dubious organizations.
+
+</details>
 
 - Резюме уже было, чутка поправил
 - Сопроводительное письмо (можно приложить если я не потерял под спойлер)
