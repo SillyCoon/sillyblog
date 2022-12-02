@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 113.4 113.4" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<clipPath id="ArtboardFrame">
+<rect height="113.4" width="113.4" x="0" y="0"/>
+</clipPath>
+<g clip-path="url(#ArtboardFrame)" id="Processor" vectornator:layerName="Processor">
+<g opacity="1">
+<path d="M113.4 113.4L5.40012e-13 113.4L5.40012e-13 0L113.4 0L113.4 113.4Z" fill="#4c4c4c" fill-rule="nonzero" opacity="1" stroke="#3c3c3c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="6"/>
+<g opacity="1">
+<path d="M68.9003 82.0099C59.3228 82.0099 55.1746 77.3379 55.1746 70.3299C55.1746 63.5615 59.0178 61.0458 65.0571 59.0093L69.0834 57.7515C73.7196 56.1942 75.1837 54.517 75.1837 50.6836C75.1837 46.8502 72.3775 44.4543 67.3753 44.4543C62.861 44.4543 59.6279 45.5923 57.2487 46.6705L57.2487 42.6574C59.5058 41.5792 62.373 40.4412 67.1923 40.4412C75.7327 40.4412 79.9419 44.8736 79.9419 51.1029C79.9419 57.2124 76.7088 60.0875 70.9745 61.9443L67.0092 63.3219C62.068 64.8793 60.0549 66.5564 60.0549 70.6893C60.0549 75.0618 62.8 77.9369 69.0834 77.9369C73.4146 77.9369 77.4408 76.8587 80.552 75.3014L80.552 79.3145C77.8068 80.812 73.9026 82.0099 68.9003 82.0099Z" fill="#f5f5f5" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M35.6536 81.8302C31.4444 81.8302 28.7602 80.6323 26.8081 79.4942L26.8081 75.7806C28.3332 76.6191 31.0173 77.877 35.1046 77.877C41.5709 77.877 44.8041 74.4628 44.8041 66.8559L44.8041 65.4183C44.8041 58.5901 41.2049 54.9363 35.7146 54.9363C31.7494 54.9363 29.7973 55.6551 27.1131 56.853L27.1131 53.0196C29.1263 51.7618 31.5054 51.043 35.4706 51.043C43.279 51.043 49.6233 55.5952 49.6233 66.1371L49.6233 67.0356C49.6233 76.7988 44.316 81.8302 35.6536 81.8302Z" fill="#f5f5f5" fill-rule="nonzero" opacity="1" stroke="none"/>
+</g>
+</g>
+</g>
+</svg>
