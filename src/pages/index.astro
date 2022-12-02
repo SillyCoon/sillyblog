@@ -3,7 +3,7 @@ import Logo from '../components/base/Logo.astro';
 import Article from '../layouts/Article.astro';
 import Layout from '../layouts/Layout.astro';
 import { findLatestPost } from '../utils/posts';
-import { Converter } from 'showdown';
+import showdown from 'showdown';
 import Title from '../components/base/Title.astro';
 import Post from '../layouts/Post.astro';
 
@@ -44,7 +44,9 @@ const latestPostExists = latestPost && !latestPost.frontmatter.draft;
             <Title>{latestPost?.frontmatter.title}</Title>
             <Post frontmatter={latestPost.frontmatter}>
               <Fragment
-                set:html={new Converter().makeHtml(latestPost?.rawContent())}
+                set:html={new showdown.Converter().makeHtml(
+                  latestPost?.rawContent()
+                )}
               />
             </Post>
           </Fragment>
