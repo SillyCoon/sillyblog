@@ -1,10 +1,7 @@
 ---
-const { platform, username, icon } = Astro.props;
+const { url, username, icon } = Astro.props;
 ---
 
-<a
-  class="px-1 py-2"
-  href={`https://www.${platform}.com/${username}`}
-  target="_blank"
-  ><img src={icon} class="w-10 cursor-pointer" alt={platform} />
+<a class="px-2 py-2" href={`https://www.${url}/${username}`} target="_blank"
+  ><img src={icon} class="w-10 cursor-pointer" alt={url} />
 </a>
