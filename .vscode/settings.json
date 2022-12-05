@@ -2,5 +2,8 @@
   "cSpell.language": "en,ru",
   "prettier.requireConfig": true,
   "prettier.singleQuote": true,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "files.associations": {
+    "*.mdx": "markdown"
+  }
 }
