@@ -1,10 +1,9 @@
 ---
+import Link from './base/Link.astro';
+
 const { url, title } = Astro.props;
 ---
 
 <li>
-  <a
-    class="text-sky-600 underline decoration-sky-700 hover:text-sky-400 hover:decoration-sky-500"
-    href={url}>{title}</a
-  >
+  <Link url={url}>{title}</Link>
 </li>
