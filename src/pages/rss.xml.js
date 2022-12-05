@@ -5,6 +5,6 @@ export const get = () =>
     title: 'Astro Learner | Blog',
     description: 'My journey learning Astro',
     site: 'https://sillyblog.netlify.app',
-    items: import.meta.glob('./**/*.md'),
+    items: import.meta.glob('./**/*.mdx'),
     customData: `<language>en-us</language>`,
   });

@@ -7,7 +7,7 @@ import showdown from 'showdown';
 import Title from '../components/base/Title.astro';
 import Post from '../layouts/Post.astro';
 
-const latestPost = findLatestPost(await Astro.glob('./posts/*.md'));
+const latestPost = findLatestPost(await Astro.glob('./posts/*.mdx'));
 const latestPostExists = latestPost && !latestPost.frontmatter.draft;
 ---
 

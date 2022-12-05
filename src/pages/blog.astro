@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import BlogPost from '../components/BlogPost.astro';
 import { sortPostsByPubDate } from '../utils/posts';
 
-const posts = sortPostsByPubDate(await Astro.glob('./posts/*.md')).toArray();
+const posts = sortPostsByPubDate(await Astro.glob('./posts/*.mdx')).toArray();
 ---
 
 <Layout title="Blog">
