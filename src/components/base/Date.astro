@@ -1,5 +1,8 @@
 ---
 const { date } = Astro.props;
+export interface Props {
+  date: string;
+}
 ---
 
 <span class="text-gray-500">{date.slice(0, 10)}</span>

@@ -1,18 +1,27 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import BlogPost from '../components/BlogPost.astro';
-import { sortPostsByPubDate } from '../utils/posts';
+import { groupPostsByCycles, sortPostsByPubDate } from '../utils/posts';
+import Cycle from '../components/Cycle.astro';
 
-const posts = sortPostsByPubDate(await Astro.glob('./posts/*.mdx')).toArray();
+const rawPosts = await Astro.glob('./posts/*.mdx');
+
+const posts = sortPostsByPubDate(rawPosts).toArray();
+const cycles = groupPostsByCycles(rawPosts).toArray();
+console.log(cycles.map((c) => c[0]));
 ---
 
 <Layout title="Blog">
+  <!-- {cycles.map(([name, posts]) => <Cycle name={name} />)} -->
+
   <ul>
     {
       posts.map((p) => (
-        <li>
-          <BlogPost url={p.url} title={p.frontmatter.title} />
-        </li>
+        <BlogPost
+          url={p.url}
+          title={p.frontmatter.title}
+          date={p.frontmatter.pubDate}
+        />
       ))
     }
   </ul>

@@ -12,3 +12,7 @@ export const sortPostsByPubDate = <T extends { frontmatter: any }>(
 
 export const findLatestPost = <T extends { frontmatter: any }>(posts: T[]) =>
   sortPostsByPubDate(posts).first();
+
+export const groupPostsByCycles = <T extends { frontmatter: any }>(
+  posts: T[]
+) => List(posts).groupBy((g) => g.frontmatter.cycle);

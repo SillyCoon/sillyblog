@@ -1,9 +1,13 @@
 ---
+import Date from './base/Date.astro';
 import Link from './base/Link.astro';
 
-const { url, title } = Astro.props;
+const { url, title, date } = Astro.props;
 ---
 
 <li>
+  <span class="mr-5">
+    <Date date={date} />
+  </span>
   <Link url={url}>{title}</Link>
 </li>
