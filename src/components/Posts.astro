@@ -1,0 +1,22 @@
+---
+import type { PostItem } from '../interface/PostItem';
+import BlogPost from './BlogPost.astro';
+
+const { posts } = Astro.props;
+
+export interface Props {
+  posts: PostItem[];
+}
+---
+
+<ul>
+  {
+    posts.map((p) => (
+      <BlogPost
+        url={p.url}
+        title={p.frontmatter.title}
+        date={p.frontmatter.pubDate}
+      />
+    ))
+  }
+</ul>

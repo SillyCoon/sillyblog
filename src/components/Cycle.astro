@@ -1,9 +1,10 @@
 ---
-import Title from './base/Title.astro';
+import Posts from './Posts.astro';
 
-const { name, articles } = Astro.props;
+const { name, posts } = Astro.props;
 ---
 
 <section>
-  <Title>{name}</Title>
+  <h2 class="mb-2 mt-5 text-xl">{name ?? 'Без названия'}</h2>
+  <Posts posts={posts} />
 </section>
