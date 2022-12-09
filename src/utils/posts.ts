@@ -1,18 +1,15 @@
 import { List } from 'immutable';
+import type { PostItem } from '../interface/PostItem';
 
-export const sortPostsByPubDate = <T extends { frontmatter: any }>(
-  posts: T[]
-) =>
-  List(
-    posts.sort(
-      (a, b) =>
-        +new Date(b.frontmatter.pubDate) - +new Date(a.frontmatter.pubDate)
-    )
-  );
+export const findLatestPost = (posts: PostItem[]) => sortByPubDate(posts)[0];
+export const findEarliestPost = (posts: PostItem[]) =>
+  sortByPubDate(posts).at(-1);
 
-export const findLatestPost = <T extends { frontmatter: any }>(posts: T[]) =>
-  sortPostsByPubDate(posts).first();
+export const groupPostsByCycles = (posts: PostItem[]) =>
+  List(posts).groupBy<string>((g) => g.frontmatter.cycle);
 
-export const groupPostsByCycles = <T extends { frontmatter: any }>(
-  posts: T[]
-) => List(posts).groupBy((g) => g.frontmatter.cycle);
+export const sortByPubDate = (posts: PostItem[]) =>
+  posts.sort((a, b) => +getPubDate(b) - +getPubDate(a));
+
+export const getPubDate = (post: PostItem): Date =>
+  new Date(post.frontmatter.pubDate);

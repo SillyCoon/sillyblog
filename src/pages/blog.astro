@@ -1,17 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import BlogPost from '../components/BlogPost.astro';
-import { groupPostsByCycles, sortPostsByPubDate } from '../utils/posts';
+import { groupPostsByCycles } from '../utils/posts';
 import Cycle from '../components/Cycle.astro';
-import Posts from '../components/Posts.astro';
 
 const rawPosts = await Astro.glob('./posts/*.mdx');
 
-const posts = sortPostsByPubDate(rawPosts).toArray();
 const cycles = groupPostsByCycles(rawPosts).toArray();
 ---
 
 <Layout title="Blog">
   {cycles.map(([name, posts]) => <Cycle name={name} posts={posts} />)}
-  <!-- <Posts posts={posts} /> -->
 </Layout>
