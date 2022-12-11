@@ -11,5 +11,8 @@ export const groupPostsByCycles = (posts: PostItem[]) =>
 export const sortByPubDate = (posts: PostItem[]) =>
   posts.sort((a, b) => +getPubDate(b) - +getPubDate(a));
 
+export const sortByOrder = (posts: PostItem[]) =>
+  posts.sort((a, b) => a.frontmatter.order - b.frontmatter.order);
+
 export const getPubDate = (post: PostItem): Date =>
   new Date(post.frontmatter.pubDate);

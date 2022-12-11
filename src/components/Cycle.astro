@@ -1,5 +1,5 @@
 ---
-import { sortByPubDate } from '../utils/posts';
+import { sortByOrder } from '../utils/posts';
 import Posts from './Posts.astro';
 
 const { name, posts } = Astro.props;
@@ -7,5 +7,5 @@ const { name, posts } = Astro.props;
 
 <section>
   <h2 class="mb-2 mt-5 text-xl">{name ?? 'Без названия'}</h2>
-  <Posts posts={sortByPubDate(posts)} />
+  <Posts posts={sortByOrder(posts)} />
 </section>
