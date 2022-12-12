@@ -1,17 +1,40 @@
 ---
 import Social from './Social.astro';
+
+const socials = [
+  {
+    url: 't.me',
+    username: 'sillycoon',
+    icon: 'telegram.svg',
+  },
+  {
+    url: 'linkedin.com/in',
+    username: 'sillycoon',
+    icon: 'linkedin.png',
+  },
+  {
+    url: 'github.com',
+    username: 'sillycoon',
+    icon: 'github.png',
+  },
+];
 ---
 
 <footer class="mt-6 gap-4 border-solid border-red-500 pr-4 align-middle">
   <div class="flex items-center justify-between pt-8 pb-2">
-    <p class="text-gray-400">With love 2022 @SillyCoon</p>
+    <p class="text-gray-400">
+      With love 2022 <a
+        href="https://t.me/sillycoon"
+        target="_blank"
+        class="cursor-pointer decoration-gray-500">@SillyCoon</a
+      >
+    </p>
     <div class="flex items-center">
-      <Social
-        url="linkedin.com/in"
-        username="sillycoon"
-        icon="/social/linkedin.png"
-      />
-      <Social url="github.com" username="sillycoon" icon="/social/github.png" />
+      {
+        socials.map((s) => (
+          <Social url={s.url} username={s.username} icon={s.icon} />
+        ))
+      }
     </div>
   </div>
 </footer>

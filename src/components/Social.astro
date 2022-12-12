@@ -3,5 +3,5 @@ const { url, username, icon } = Astro.props;
 ---
 
 <a class="px-2 py-2" href={`https://www.${url}/${username}`} target="_blank"
-  ><img src={icon} class="w-10 cursor-pointer" alt={url} />
+  ><img src={'/social/' + icon} class="w-10 cursor-pointer" alt={url} />
 </a>
