@@ -1,10 +1,28 @@
 ---
 import Book from '../components/Book.astro';
 import Layout from '../layouts/Layout.astro';
+
+const books: any[] = [
+  {
+    name: 'Защита от темных искусств',
+    author: 'Александр Панчин',
+    link: 'https://www.livelib.ru/book/1002566942-zaschita-ot-temnyh-iskusstv-putevoditel-po-miru-paranormalnyh-yavlenij-aleksandr-panchin',
+    description:
+      'Если вы еще боитесь привидений, колдунов или одержимости, то эта книга определенно для вас. Она научит самому эффективному способу защититься от любого сглаза и порчи - не верить в них.',
+  },
+];
 ---
 
 <Layout title="Literature">
-  <!-- <Book name="Lol" author="Kek" link="google.com"
-    >Ента книга научила меня всему что я знаю</Book
-  > -->
+  <p class="mb-5">
+    Касательно ссылок. Для всех книг на русском я буду давать ссылки на Livelib,
+    все книги на английском со ссылками на Amazon.
+  </p>
+  {
+    books.map((b) => (
+      <Book name={b.name} author={b.author} link={b.link}>
+        {b.description}
+      </Book>
+    ))
+  }
 </Layout>
