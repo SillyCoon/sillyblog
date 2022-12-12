@@ -6,8 +6,16 @@ const { url, title, date, order, draft } = Astro.props;
 ---
 
 <li>
-  <span class="mr-5 text-gray-500">
-    {order ? order : <Date date={date} />}
+  <span class="mr-2 text-gray-500">
+    {
+      order ? (
+        order
+      ) : (
+        <span class="mr-3">
+          <Date date={date} />
+        </span>
+      )
+    }
   </span>
   <Link url={url}>{title}</Link>
   <span class="ml-5 text-gray-400">{draft ? 'В разработке' : ''}</span>
