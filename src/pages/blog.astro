@@ -5,7 +5,9 @@ import Cycle from '../components/Cycle.astro';
 
 const rawPosts = await Astro.glob('./posts/*.mdx');
 
-const cycles = groupPostsByCycles(rawPosts).toArray();
+const cycles = groupPostsByCycles(rawPosts)
+  .toArray()
+  .sort(([n1, _c1], [_n2, _c2]) => (!!n1 ? -1 : 1));
 ---
 
 <Layout title="Blog">
