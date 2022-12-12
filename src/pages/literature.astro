@@ -1,6 +1,7 @@
 ---
 import Book from '../components/Book.astro';
 import Layout from '../layouts/Layout.astro';
+import HideFromProd from '../components/base/HideFromProd.astro';
 
 const books: any[] = [
   {
@@ -10,6 +11,83 @@ const books: any[] = [
     description:
       'Если вы еще боитесь привидений, колдунов или одержимости, то эта книга определенно для вас. Она научит самому эффективному способу защититься от любого сглаза и порчи - не верить в них.',
   },
+  {
+    name: 'Data-Oriented Programming',
+    author: 'Yehonathan Sharvit',
+    link: 'https://www.livelib.ru/book/1002566942-zaschita-ot-temnyh-iskusstv-putevoditel-po-miru-paranormalnyh-yavlenij-aleksandr-panchin',
+    description:
+      'Если вы еще боитесь привидений, колдунов или одержимости, то эта книга определенно для вас. Она научит самому эффективному способу защититься от любого сглаза и порчи - не верить в них.',
+  },
+  {
+    name: 'Grokking Simplicity',
+    author: 'Eric Normand',
+    link: 'https://www.livelib.ru/book/1002566942-zaschita-ot-temnyh-iskusstv-putevoditel-po-miru-paranormalnyh-yavlenij-aleksandr-panchin',
+    description:
+      'Если вы еще боитесь привидений, колдунов или одержимости, то эта книга определенно для вас. Она научит самому эффективному способу защититься от любого сглаза и порчи - не верить в них.',
+  },
+  {
+    name: 'Хаос. Создание новой науки',
+    author: 'Джеймс Глейк',
+    link: 'https://www.livelib.ru/book/1002566942-zaschita-ot-temnyh-iskusstv-putevoditel-po-miru-paranormalnyh-yavlenij-aleksandr-panchin',
+    description:
+      'Если вы еще боитесь привидений, колдунов или одержимости, то эта книга определенно для вас. Она научит самому эффективному способу защититься от любого сглаза и порчи - не верить в них.',
+  },
+  {
+    name: 'Спиральная динамика. Управляя ценностями, лидерством и изменениями в XXI веке',
+    author: 'Дон Бек, Крис Кован',
+    link: 'https://www.livelib.ru/book/1002566942-zaschita-ot-temnyh-iskusstv-putevoditel-po-miru-paranormalnyh-yavlenij-aleksandr-panchin',
+    description:
+      'Если вы еще боитесь привидений, колдунов или одержимости, то эта книга определенно для вас. Она научит самому эффективному способу защититься от любого сглаза и порчи - не верить в них.',
+  },
+  {
+    name: 'Frameworkless Front-End Development',
+    author: 'Francesco Strazzullo',
+    link: 'https://www.livelib.ru/book/1002566942-zaschita-ot-temnyh-iskusstv-putevoditel-po-miru-paranormalnyh-yavlenij-aleksandr-panchin',
+    description:
+      'Если вы еще боитесь привидений, колдунов или одержимости, то эта книга определенно для вас. Она научит самому эффективному способу защититься от любого сглаза и порчи - не верить в них.',
+  },
+  {
+    name: 'Рефакторинг',
+    author: 'Мартин Фаулер',
+    link: 'https://www.livelib.ru/book/1002566942-zaschita-ot-temnyh-iskusstv-putevoditel-po-miru-paranormalnyh-yavlenij-aleksandr-panchin',
+    description:
+      'Если вы еще боитесь привидений, колдунов или одержимости, то эта книга определенно для вас. Она научит самому эффективному способу защититься от любого сглаза и порчи - не верить в них.',
+  },
+  {
+    name: 'Высоконагруженные приложения. Программирование масштабирование поддержка',
+    author: 'Мартин Клеппман',
+    link: 'https://www.livelib.ru/book/1002566942-zaschita-ot-temnyh-iskusstv-putevoditel-po-miru-paranormalnyh-yavlenij-aleksandr-panchin',
+    description:
+      'Если вы еще боитесь привидений, колдунов или одержимости, то эта книга определенно для вас. Она научит самому эффективному способу защититься от любого сглаза и порчи - не верить в них.',
+  },
+  {
+    name: 'Сила привычки',
+    author: 'Чарльз Дахигг',
+    link: 'https://www.livelib.ru/book/1002566942-zaschita-ot-temnyh-iskusstv-putevoditel-po-miru-paranormalnyh-yavlenij-aleksandr-panchin',
+    description:
+      'Если вы еще боитесь привидений, колдунов или одержимости, то эта книга определенно для вас. Она научит самому эффективному способу защититься от любого сглаза и порчи - не верить в них.',
+  },
+  {
+    name: 'Чистый Agile. Основы гибкости',
+    author: 'Роберт Мартин',
+    link: 'https://www.livelib.ru/book/1002566942-zaschita-ot-temnyh-iskusstv-putevoditel-po-miru-paranormalnyh-yavlenij-aleksandr-panchin',
+    description:
+      'Если вы еще боитесь привидений, колдунов или одержимости, то эта книга определенно для вас. Она научит самому эффективному способу защититься от любого сглаза и порчи - не верить в них.',
+  },
+  {
+    name: 'Чистый Код',
+    author: 'Роберт Мартин',
+    link: 'https://www.livelib.ru/book/1002566942-zaschita-ot-temnyh-iskusstv-putevoditel-po-miru-paranormalnyh-yavlenij-aleksandr-panchin',
+    description:
+      'Если вы еще боитесь привидений, колдунов или одержимости, то эта книга определенно для вас. Она научит самому эффективному способу защититься от любого сглаза и порчи - не верить в них.',
+  },
+  {
+    name: 'Сначала скажите "нет"',
+    author: 'Джим Кэмп',
+    link: 'https://www.livelib.ru/book/1002566942-zaschita-ot-temnyh-iskusstv-putevoditel-po-miru-paranormalnyh-yavlenij-aleksandr-panchin',
+    description: `Я вообще очень скептически отношусь к книгами с такими названиями, но данная была рекомендована бюро Горбунова, так что я дал ей шанс и не зря.
+       Поможет направить свое мышление в нужное русло и начинать вести переговоры (а все что нас окружает каждый день является переговорами) осмысленно и с выгодой для себя.`,
+  },
 ];
 ---
 
@@ -18,11 +96,15 @@ const books: any[] = [
     Касательно ссылок. Для всех книг на русском я буду давать ссылки на Livelib,
     все книги на английском со ссылками на Amazon.
   </p>
-  {
-    books.map((b) => (
-      <Book name={b.name} author={b.author} link={b.link}>
-        {b.description}
-      </Book>
-    ))
-  }
+  <HideFromProd>
+    {
+      books.map((b) => (
+        <div class="mb-5">
+          <Book name={b.name} author={b.author} link={b.link}>
+            {b.description}
+          </Book>
+        </div>
+      ))
+    }
+  </HideFromProd>
 </Layout>
