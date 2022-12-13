@@ -1,0 +1,12 @@
+---
+import ArrowTopRightIcon from '../icons/ArrowTopRightIcon.astro';
+
+const { url, blank } = Astro.props;
+---
+
+<a
+  class="block w-fit text-sky-600 underline decoration-sky-700 hover:text-sky-400 hover:decoration-sky-500"
+  href={url}
+  target={blank ? '_blank' : '_self'}
+  ><ArrowTopRightIcon />
+</a>
