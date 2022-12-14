@@ -97,14 +97,16 @@ const books: any[] = [
     все книги на английском со ссылками на Amazon.
   </p>
   <HideFromProd>
-    {
-      books.map((b) => (
-        <div class="mb-5">
-          <Book name={b.name} author={b.author} link={b.link}>
-            {b.description}
-          </Book>
-        </div>
-      ))
-    }
+    <div class="grid gap-5">
+      {
+        books.map((b) => (
+          <div>
+            <Book name={b.name} author={b.author} link={b.link}>
+              {b.description}
+            </Book>
+          </div>
+        ))
+      }
+    </div>
   </HideFromProd>
 </Layout>
