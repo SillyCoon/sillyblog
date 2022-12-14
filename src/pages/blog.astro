@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { groupPostsByCycles } from '../utils/posts';
 import Cycle from '../components/Cycle.astro';
+import SimpleCard from '../components/base/SimpleCard.astro';
 
 const rawPosts = await Astro.glob('./posts/*.mdx');
 
@@ -11,12 +12,18 @@ const cycles = groupPostsByCycles(rawPosts)
 ---
 
 <Layout title="Blog">
-  <p>
-    Я очень плохо представляю правовые основы написания подробных ~трип~
-    репортов, поэтому сразу говорю, что данный блог не отражает действительности
-    и ведется от лица вымышленного человека, все совпадения с реальностью
-    случайны, а персонажи не существуют.
-  </p>
+  <div class="mb-5">
+    <SimpleCard>
+      <p class="font-extrabold">ДИСКЛЕЙМЕР</p>
+      <p>
+        Я очень плохо представляю правовые основы написания подробных <s>трип</s
+        >
+        репортов, поэтому предупреждаю. Данный блог не отражает действительности
+        и ведется от лица вымышленного человека, все совпадения с реальностью случайны,
+        а персонажи не существуют.
+      </p>
+    </SimpleCard>
+  </div>
 
   <h2 class="text-xl text-gray-500">
     Серый цвет ссылки означает, что статья в разработке
