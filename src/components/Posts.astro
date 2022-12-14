@@ -12,13 +12,15 @@ export interface Props {
 <ul>
   {
     posts.map((p) => (
-      <BlogPost
-        url={p.url}
-        title={p.frontmatter.title}
-        date={p.frontmatter.pubDate}
-        order={p.frontmatter.order}
-        draft={p.frontmatter.draft}
-      />
+      <li>
+        <BlogPost
+          url={p.url}
+          title={p.frontmatter.title}
+          date={p.frontmatter.pubDate}
+          order={p.frontmatter.order}
+          draft={p.frontmatter.draft}
+        />
+      </li>
     ))
   }
 </ul>

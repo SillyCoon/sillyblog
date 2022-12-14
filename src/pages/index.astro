@@ -3,10 +3,7 @@ import Logo from '../components/base/Logo.astro';
 import Article from '../layouts/Article.astro';
 import Layout from '../layouts/Layout.astro';
 import { findLatestPost } from '../utils/posts';
-import showdown from 'showdown';
-import Title from '../components/base/Title.astro';
-import Post from '../layouts/Post.astro';
-
+import BlogPost from '../components/BlogPost.astro';
 const latestPost = findLatestPost(await Astro.glob('./posts/*.mdx'));
 const latestPostExists = latestPost && !latestPost.frontmatter.draft;
 ---
@@ -37,19 +34,15 @@ const latestPostExists = latestPost && !latestPost.frontmatter.draft;
   </div>
   <div class="mt-10">
     <div>
-      <h2 class="text-2xl">А вот и последний пост:</h2>
+      <h2 class="mb-5 text-2xl">А вот и последний пост:</h2>
       {
         latestPostExists && (
-          <Fragment>
-            <Title>{latestPost?.frontmatter.title}</Title>
-            <Post frontmatter={latestPost.frontmatter}>
-              <Fragment
-                set:html={new showdown.Converter().makeHtml(
-                  latestPost?.rawContent()
-                )}
-              />
-            </Post>
-          </Fragment>
+          <BlogPost
+            url={latestPost.url}
+            title={latestPost.frontmatter.title}
+            date={latestPost.frontmatter.pubDate}
+            draft={latestPost.frontmatter.draft}
+          />
         )
       }
       {!latestPostExists && <p>Кажется постов еще нет :(</p>}
