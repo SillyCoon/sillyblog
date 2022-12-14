@@ -16,5 +16,4 @@ const { url, title, date, order, draft } = Astro.props;
     )
   }
 </span>
-<Link url={url}>{title}</Link>
-<span class="ml-5 text-gray-400">{draft ? 'В разработке' : ''}</span>
+<Link url={url} disabled={draft}>{title}</Link>

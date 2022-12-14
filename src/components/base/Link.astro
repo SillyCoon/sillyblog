@@ -1,10 +1,21 @@
 ---
-const { url, blank } = Astro.props;
+const { url, blank, disabled } = Astro.props;
+const devMode = import.meta.env.DEV;
+const available = !disabled || devMode;
 ---
 
-<a
-  class="text-sky-600 underline decoration-sky-700 hover:text-sky-400 hover:decoration-sky-500"
-  href={url}
-  target={blank ? '_blank' : '_self'}
-  ><slot />
-</a>
+{
+  available ? (
+    <a
+      class="text-sky-600 underline decoration-sky-700 hover:text-sky-400 hover:decoration-sky-500"
+      href={url}
+      target={blank ? '_blank' : '_self'}
+    >
+      <slot />
+    </a>
+  ) : (
+    <span class="text-gray-400">
+      <slot />
+    </span>
+  )
+}

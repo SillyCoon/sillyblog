@@ -11,5 +11,8 @@ const cycles = groupPostsByCycles(rawPosts)
 ---
 
 <Layout title="Blog">
+  <h2 class="text-xl text-gray-500">
+    Серый цвет ссылки означает, что статья в разработке
+  </h2>
   {cycles.map(([name, posts]) => <Cycle name={name} posts={posts} />)}
 </Layout>
