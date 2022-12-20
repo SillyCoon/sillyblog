@@ -5,7 +5,7 @@ import Layout from '../layouts/Layout.astro';
 import { findLatestPost } from '../utils/posts';
 import BlogPost from '../components/BlogPost.astro';
 import SimpleCard from '../components/base/SimpleCard.astro';
-const latestPost = findLatestPost(await Astro.glob('./posts/*.mdx'));
+const latestPost = findLatestPost(await Astro.glob('./posts/**/*.mdx'));
 const latestPostExists = latestPost && !latestPost.frontmatter.draft;
 ---
 

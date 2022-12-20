@@ -4,7 +4,7 @@ import { groupPostsByCycles } from '../utils/posts';
 import Cycle from '../components/Cycle.astro';
 import SimpleCard from '../components/base/SimpleCard.astro';
 
-const rawPosts = await Astro.glob('./posts/*.mdx');
+const rawPosts = await Astro.glob('./posts/**/*.mdx');
 
 const cycles = groupPostsByCycles(rawPosts)
   .toArray()
