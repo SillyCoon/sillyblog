@@ -1,6 +1,11 @@
 ---
 const { invert, leaveBlank } = Astro.props;
 
+export interface Props {
+  invert?: boolean;
+  leaveBlank?: boolean;
+}
+
 const devMode = import.meta.env.DEV;
 ---
 

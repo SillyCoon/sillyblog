@@ -2,17 +2,23 @@
 import Layout from '../layouts/Layout.astro';
 import { groupPostsByCycles } from '../utils/posts';
 import Cycle from '../components/Cycle.astro';
+import HideFromProd from '../components/base/HideFromProd.astro';
 
 const rawPosts = await Astro.glob('./posts/**/*.mdx');
 
-const cycles = groupPostsByCycles(rawPosts)
+const devCycles = groupPostsByCycles(
+  rawPosts.filter((p) => p.frontmatter.draft)
+).toArray();
+
+const cycles = groupPostsByCycles(rawPosts.filter((p) => !p.frontmatter.draft))
   .toArray()
   .sort(([n1, _c1], [_n2, _c2]) => (!!n1 ? -1 : 1));
 ---
 
 <Layout title="Blog">
-  <h2 class="text-xl text-gray-500">
-    Серый цвет ссылки означает, что статья в разработке
-  </h2>
   {cycles.map(([name, posts]) => <Cycle name={name} posts={posts} />)}
+  <HideFromProd leaveBlank>
+    <h2 class="mt-10 text-xl text-gray-500">DEV</h2>
+    {devCycles.map(([name, posts]) => <Cycle name={name} posts={posts} />)}
+  </HideFromProd>
 </Layout>
