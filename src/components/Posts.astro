@@ -14,25 +14,13 @@ export interface Props {
   {
     posts.map((p) => (
       <li>
-        {p.frontmatter.excluded ? (
-          <HideFromProd leaveBlank>
-            <BlogPost
-              url={p.url}
-              title={p.frontmatter.title}
-              date={p.frontmatter.pubDate}
-              order={p.frontmatter.order}
-              draft={p.frontmatter.draft}
-            />
-          </HideFromProd>
-        ) : (
-          <BlogPost
-            url={p.url}
-            title={p.frontmatter.title}
-            date={p.frontmatter.pubDate}
-            order={p.frontmatter.order}
-            draft={p.frontmatter.draft}
-          />
-        )}
+        <BlogPost
+          url={p.url}
+          title={p.frontmatter.title}
+          date={p.frontmatter.pubDate}
+          order={p.frontmatter.order}
+          draft={p.frontmatter.draft}
+        />
       </li>
     ))
   }
