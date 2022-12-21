@@ -1,10 +1,14 @@
 ---
-const { invert } = Astro.props;
+const { invert, leaveBlank } = Astro.props;
 
 const devMode = import.meta.env.DEV;
 ---
 
 <Fragment>
   {!invert && devMode && <slot />}
-  {(invert || !devMode) && <p class="text-xl text-gray-500">В разработке</p>}
+  {
+    (invert || !devMode) && !leaveBlank && (
+      <p class="text-xl text-gray-500">В разработке</p>
+    )
+  }
 </Fragment>

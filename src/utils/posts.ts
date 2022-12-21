@@ -1,7 +1,9 @@
 import { List } from 'immutable';
 import type { PostItem } from '../interface/PostItem';
 
-export const findLatestPost = (posts: PostItem[]) => sortByPubDate(posts)[0];
+export const findLatestPost = (posts: PostItem[]) =>
+  sortByPubDate(posts.filter((p) => !p.frontmatter.draft))[0];
+
 export const findEarliestPost = (posts: PostItem[]) =>
   sortByPubDate(posts).at(-1);
 

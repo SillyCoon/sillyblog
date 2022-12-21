@@ -6,7 +6,6 @@ import { findLatestPost } from '../utils/posts';
 import BlogPost from '../components/BlogPost.astro';
 import SimpleCard from '../components/base/SimpleCard.astro';
 const latestPost = findLatestPost(await Astro.glob('./posts/**/*.mdx'));
-const latestPostExists = latestPost && !latestPost.frontmatter.draft;
 ---
 
 <Layout title="SillyBlog">
@@ -51,7 +50,7 @@ const latestPostExists = latestPost && !latestPost.frontmatter.draft;
     <div>
       <h2 class="mb-5 text-2xl">А вот и последний пост:</h2>
       {
-        latestPostExists && (
+        latestPost && (
           <BlogPost
             url={latestPost.url}
             title={latestPost.frontmatter.title}
@@ -60,7 +59,7 @@ const latestPostExists = latestPost && !latestPost.frontmatter.draft;
           />
         )
       }
-      {!latestPostExists && <p>Кажется постов еще нет :(</p>}
+      {!latestPost && <p>Кажется постов еще нет :(</p>}
       <!-- <Greeting client:load messages={['Hi', 'Hello', 'Howdy', 'Hey there']} /> -->
     </div>
   </div>

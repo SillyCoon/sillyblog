@@ -1,5 +1,6 @@
 ---
 import type { PostItem } from '../interface/PostItem';
+import HideFromProd from './base/HideFromProd.astro';
 import BlogPost from './BlogPost.astro';
 
 const { posts } = Astro.props;
@@ -13,13 +14,25 @@ export interface Props {
   {
     posts.map((p) => (
       <li>
-        <BlogPost
-          url={p.url}
-          title={p.frontmatter.title}
-          date={p.frontmatter.pubDate}
-          order={p.frontmatter.order}
-          draft={p.frontmatter.draft}
-        />
+        {p.frontmatter.excluded ? (
+          <HideFromProd leaveBlank>
+            <BlogPost
+              url={p.url}
+              title={p.frontmatter.title}
+              date={p.frontmatter.pubDate}
+              order={p.frontmatter.order}
+              draft={p.frontmatter.draft}
+            />
+          </HideFromProd>
+        ) : (
+          <BlogPost
+            url={p.url}
+            title={p.frontmatter.title}
+            date={p.frontmatter.pubDate}
+            order={p.frontmatter.order}
+            draft={p.frontmatter.draft}
+          />
+        )}
       </li>
     ))
   }
