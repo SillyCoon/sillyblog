@@ -5,6 +5,7 @@ import Layout from '../layouts/Layout.astro';
 import { findLatestPost } from '../utils/posts';
 import BlogPost from '../components/BlogPost.astro';
 import SimpleCard from '../components/base/SimpleCard.astro';
+import Link from '../components/base/Link.astro';
 const latestPost = findLatestPost(await Astro.glob('./posts/**/*.mdx'));
 ---
 
@@ -43,6 +44,17 @@ const latestPost = findLatestPost(await Astro.glob('./posts/**/*.mdx'));
           репортов, поэтому предупреждаю. Данный блог не отражает действительности
           и ведется от лица вымышленного человека, все совпадения с реальностью случайны,
           а персонажи не существуют.
+        </p>
+      </SimpleCard>
+    </div>
+    <div class="mb-5">
+      <SimpleCard>
+        <p>
+          Имеется также
+          <Link blank={true} url="https://t.me/sillycoon_japan">
+            блог поменьше
+          </Link> в телеграме. В нем я пишу на бытовые темы короткие посты и выкладываю
+          фоточки.
         </p>
       </SimpleCard>
     </div>
