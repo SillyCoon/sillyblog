@@ -1,18 +1,25 @@
 ---
-const { invert, leaveBlank } = Astro.props;
+const { invert, leaveBlank, placeholder } = Astro.props;
 
 export interface Props {
   invert?: boolean;
   leaveBlank?: boolean;
+  placeholder?: boolean;
 }
 
 const devMode = import.meta.env.DEV;
 ---
 
 <Fragment>
-  {!invert && devMode && <slot />}
   {
-    (invert || !devMode) && !leaveBlank && (
+    !invert && devMode && (
+      <>
+        <span>Dev only:</span> <slot />
+      </>
+    )
+  }
+  {
+    (invert || !devMode) && !leaveBlank && placeholder && (
       <p class="text-xl text-gray-500">В разработке</p>
     )
   }
