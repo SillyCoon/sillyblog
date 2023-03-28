@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  img: ImageMetadata;
+  alt: string;
+  description?: string;
+}
+
+const { img, alt, description } = Astro.props;
+---
+
+<section class="mb-10 grid gap-2">
+  <Image src={img.src} alt={alt} width={img.width} height={img.height} />
+  <p class="justify-self-center italic text-gray-500">{description}</p>
+</section>

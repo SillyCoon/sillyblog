@@ -12,6 +12,9 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   integrations: [preact(), tailwind(), mdx(
-    {rehypePlugins: [rehypeAutolinkHeadings]}
-  )]
+    { rehypePlugins: [rehypeAutolinkHeadings], syntaxHighlight: 'shiki', }
+  )],
+  experimental: {
+    assets: true
+  }
 });
