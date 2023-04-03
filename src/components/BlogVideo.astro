@@ -1,0 +1,14 @@
+---
+const { src, description } = Astro.props;
+---
+
+<section class="mb-10 grid gap-2">
+  <iframe
+    width="660"
+    height="415"
+    src="https://www.youtube.com/embed/n54johuXzF4"
+    title="YouTube video player"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+  <p class="justify-self-center italic text-gray-500">{description}</p>
+</section>
